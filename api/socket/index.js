@@ -27,7 +27,12 @@ const removeUser = (socketId) => {
 const socketInit = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: ["/*", "*", "http://localhost:5000"],
+      origin: [
+        "https://chat-app-nodejs.vercel.app",
+        "/*",
+        "*",
+        "http://localhost:5000",
+      ],
     },
   });
 
